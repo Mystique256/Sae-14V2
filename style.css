@@ -15,25 +15,116 @@ header {
   margin-right: 5px;
   visibility: hidden;
 }
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-right: 2em;
-  font-size: 1em;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+.slide {
+    height: 100%;
+    width: 180px;
+    position: absolute;
+    background-color: rgb(32, 32, 32);
+    transition: 0.5s ease;
+    font-family: "Oswald" , sans-serif;
+    transform: translateX(-180px);
 }
-li a {
-  color: rgba(255, 255, 255, 0.842);
-  margin-left: 1em;
-  text-decoration: none;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
+h1 {
+    color: rgb(0, 148, 216);
+    font-weight: 180;
+    text-align: right;
+    padding: 10px;
+    padding-right: 30px;
+    pointer-events: none
 }
 
-li a:hover {
-  text-decoration: underline;
-  color: aliceblue;
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    color: rgb(0, 81, 173);
+    font-size: 20px;
+    padding: 5px 0;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li a i {
+    width: 40px;
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+input {
+    display: none;
+    visibility: hidden;
+}
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+    cursor: pointer;
+    background-color: rgb(32, 32, 32);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.726);
+}
+
+.toggle .common {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color:  rgb(0, 148, 216);
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top_line {
+    left: 50%;
+    top: 30%;
+    transform: translate(-50% , -50%);
+}
+
+.toggle .mid_line {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.toggle .but_line {
+    left: 50%;
+    top: 70%;
+    transform: translate(-50% , -50%);
+}
+
+input:checked ~ .toggle .top_line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .but_line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .mid_line {
+    transform:translateX(20px);
+    opacity: 0;
+}
+
+input:checked ~ .slide {
+    transform: translateX(0);
 }
 
 @media screen and (max-width: 554px) {
@@ -77,54 +168,6 @@ li a:hover {
     -webkit-animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;}
 
-          .btn {
-            width: 150px;
-            height: 50px;
-            border-radius: 5px;
-            border: none;
-            transition: all 0.5s ease-in-out;
-            font-size: 20px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            background: #f3f3f3;
-            color: #000000;
-            position: fixed;
-            z-index: 1;
-          }
-          
-          .btn:hover {
-            box-shadow: 0 0 20px 0px #2e2e2e3a;
-          }
-          
-          .btn .icon {
-            position: absolute;
-            height: 40px;
-            width: 70px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.5s;
-          }
-          
-          .btn .text {
-            transform: translateX(45px);
-          }
-          
-          .btn:hover .icon {
-            animation-duration: 1s;
-            animation-name: menu;
-          }          
-          .btn:hover .text {
-            transition: all 0.5s;
-            opacity: 0;
-          }
-          
-          .btn:focus {
-            outline: none;
-          }
-          
 
     @-webkit-keyframes slide-in-left {
         0% {
