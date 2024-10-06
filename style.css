@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: rgba(37, 6, 212, 0.747);
 }
 
 header {
@@ -19,12 +19,12 @@ header {
 
 .slide {
     height: 100%;
-    width: 180px;
+    width: 200px;
     position: absolute;
     background-color: rgb(32, 32, 32);
     transition: 0.5s ease;
     font-family: "Oswald" , sans-serif;
-    transform: translateX(-180px);
+    transform: translateX(-200px);
 }
 h1 {
     color: rgb(0, 148, 216);
@@ -40,6 +40,7 @@ ul li {
 }
 
 ul li a {
+    margin-top: 20px;
     color: rgb(0, 81, 173);
     font-size: 20px;
     padding: 5px 0;
@@ -67,8 +68,8 @@ input {
 }
 .toggle {
     position: absolute;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     top: 20px;
     left: 15px;
     z-index: 1;
@@ -80,8 +81,8 @@ input {
 
 .toggle .common {
     position: absolute;
-    height: 2px;
-    width: 20px;
+    height: 4px;
+    width: 40px;
     background-color:  rgb(0, 148, 216);
     border-radius: 50px;
     transition: 0.3s ease;
@@ -107,14 +108,14 @@ input {
 
 input:checked ~ .toggle .top_line {
     left: 2px;
-    top: 14px;
-    width: 25px;
+    top: 22px;
+    width: 45px;
     transform: rotate(45deg);
 }
 input:checked ~ .toggle .but_line {
     left: 2px;
-    top: 14px;
-    width: 25px;
+    top: 22px;
+    width: 45px;
     transform: rotate(-45deg);
 }
 
@@ -141,7 +142,7 @@ input:checked ~ .slide {
 .espace {
   width: 100%;
   height: 60em;
-  background: url("https://wallpapercave.com/wp/wp3278108.jpg");
+  background-image:url(./image/cyber-3400789_1920.jpg);
 }
 
 .parent {
@@ -154,20 +155,34 @@ input:checked ~ .slide {
     }
     
     .div1 { grid-area: 1 / 1 / 5 / 7;
-    background-color: blueviolet;}
-    .div2 { grid-area: 1 / 7 / 5 / 13;
-    background-color: blueviolet; }
+    background-image: url(./image/biking-1183092.jpg);
+    min-width: 50em;}
+    .div2 { 
+    grid-area: 1 / 7 / 5 / 13;
+    background-color: rgb(255, 255, 255);
+    text-align: justify;
+    font-size: large;
+    padding: 20px;
+    font-family: "Oswald" , sans-serif;
+    }
     .div3 { grid-area: 5 / 1 / 9 / 13;
+    background-color: blueviolet; }
+    .div4 { 
+     grid-area: 9 / 9 / 13 / 13;
     background-color: blueviolet;
-        -webkit-animation: slide-in-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
-            animation: slide-in-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards; }
-    .div4 { grid-area: 9 / 8 / 13 / 13;
-    background-color: blueviolet;}
-    .div5 { grid-area: 9 / 1 / 13 / 8; 
-    background-color: blueviolet;
-    -webkit-animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;}
+    margin-left: 5px;}
+    .div5 { grid-area: 9 / 1 / 13 / 9; 
+    background-image: url(./image/boules-2-1306419.jpg);
+    margin-right: 5px;
+    }
 
+.espace h1 {
+  margin-top: 5em;
+  font-size: 100px;
+  display: flex;
+  float: right;
+  font-family: "Oswald" , sans-serif;
+}
 
     @-webkit-keyframes slide-in-left {
         0% {
